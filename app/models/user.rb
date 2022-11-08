@@ -6,5 +6,6 @@ class User < ApplicationRecord
          :confirmable
   
   has_many :foods
+  has_many :recipes
   validates :name, presence: true
 end
