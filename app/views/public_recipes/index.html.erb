@@ -1,0 +1,10 @@
+<h1>Public recipes </h1>
+<% @public_recipes.each do |recipe| %>
+    <h3><%= recipe.name %></h3> 
+    <div>description: <%= recipe.description %></div>
+    <div>cooking time: <%= recipe.cooking_time %></div>
+    <div>preparation time: <%= recipe.preparation_time %></div>
+    <div>public: <%= recipe.public %></div>
+    <%= link_to 'View Recipe', recipe %>
+    <hr>
+<% end %>
