@@ -1,0 +1,11 @@
+<h1>List of Recipes</h1>
+
+<% @recipes.each do |recipe| %>
+    <h3><%= recipe.name %></h3> 
+    <div>description: <%= recipe.description %></div>
+    <div>cooking time: <%= recipe.cooking_time %></div>
+    <div>preparation time: <%= recipe.preparation_time %></div>
+    <div>public: <%= recipe.public %></div>
+    <%= link_to 'delete', recipe, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %>
+    <hr>
+<% end %>
