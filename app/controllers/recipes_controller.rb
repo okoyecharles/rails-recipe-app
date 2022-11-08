@@ -6,7 +6,7 @@ class RecipesController < ApplicationController
   def show
     @recipe = Recipe.find(params[:id])
   end
-  
+
   def destroy
     recipe = Recipe.find(params[:id])
     if recipe.destroy
