@@ -10,7 +10,9 @@
   </article>
   <div class="buttons d-flex justify-content-between">
     <button class="btn btn-primary fw-bold">Generate Shopping List</button>
-    <button id="add-ingredient" data-toggle="modal" data-target="#add-ingredient-modal" class="btn btn-success fw-bold">Add Ingredient</button>
+    <% if can? :add_ingredient, @recipe %>
+      <button id="add-ingredient" data-toggle="modal" data-target="#add-ingredient-modal" class="btn btn-success fw-bold">Add Ingredient</button>
+    <% end %>
   </div>
   <hr>
   <%= render 'table' %>

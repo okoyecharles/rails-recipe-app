@@ -1,4 +1,6 @@
 class RecipesController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @recipes = current_user.recipes
   end
@@ -19,8 +21,7 @@ class RecipesController < ApplicationController
     if recipe.save
       redirect_to recipe, notice: 'Recipe was successfully created.'
     else
-      render :new
-      flash[:error] = 'Recipe was not created.'
+      redirect_to new_recipe_path, notice: 'There was an error creating the recipe.'
     end
   end
 

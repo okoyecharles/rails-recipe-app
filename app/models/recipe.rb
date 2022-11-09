@@ -13,7 +13,17 @@ class Recipe < ApplicationRecord
   end
 
   def available_foods
-    # All foods that are not in the recipe
-    Food.where.not(id: all_ingredients.map(&:food_id))
+    # All foods for user that are not in the recipe
+    user.foods.where.not(id: all_ingredients.map(&:food_id))
+  end
+
+  def total_price
+    # Total price of the recipe
+    sum = 0
+    RecipeFood.where(recipe_id: id).each do |ingredient|
+      sum += ingredient.food.price * ingredient.quantity / ingredient.food.quantity
+    end
+
+    sum
   end
 end

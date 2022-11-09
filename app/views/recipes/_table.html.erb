@@ -8,7 +8,7 @@
     <% @recipe.all_ingredients.each do |ingredient| %>
       <tr>
         <td><%= ingredient.food.name %></td>
-        <td><%= ingredient.quantity %> <%= ingredient.food.measurement_unit %></td>
+        <td><%= pluralize(ingredient.quantity, ingredient.food.measurement_unit) %></td>
         <td>$<%= ingredient.food.price * (ingredient.quantity / ingredient.food.quantity) %></td>
         <td><%= link_to 'Remove', recipe_food_path(ingredient),
           data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' },
