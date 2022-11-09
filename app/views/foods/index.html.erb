@@ -1,9 +1,9 @@
 <section>
   <%= link_to new_food_path do %>
-    <button>Add Food</button>
+    <button class="bg-success rounded p-2 border-0 text-light fw-bold my-2">Add Food</button>
   <% end %>
 
-  <table>
+  <table class="table table-striped table-active">
     <tr>
       <th>Food</th>
       <th>Measurement Unit</th>
@@ -15,7 +15,7 @@
         <td><%= food.name %></td>
         <td><%= food.quantity %><%= food.measurement_unit %></td>
         <td>$<%= food.price %></td>
-        <td><%= link_to 'Delete', foods_path %></td>
+        <td><%= link_to 'Delete', foods_path, class: 'btn bg-danger text-light fw-bold' %></td>
       <tr>
     <% end %>
   </table>

@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'recipes/index'
-  devise_for :users
+  devise_for :users, sign_out_via: %i[get post]
   # Defines the root path route ("/")
   root to: 'users#index'
   resources :foods, only: %i[index show new create]

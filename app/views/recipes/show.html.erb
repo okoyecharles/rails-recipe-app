@@ -1,6 +1,16 @@
-<h3><%= @recipe.name %></h3> 
-    <div>description: <%= @recipe.description %></div>
-    <div>cooking time: <%= @recipe.cooking_time %></div>
-    <div>preparation time: <%= @recipe.preparation_time %></div>
-    <div>public: <%= @recipe.public %></div>
-    <hr>
+<section>
+  <h3 class="text-center"><%= @recipe.name %></h3> 
+  <article class="d-flex flex-column gap-3">
+    <div class="d-flex justify-content-between">
+      <p><b>Preparation time:</b> <%= @recipe.preparation_time %></p>
+      <p><b>Public:</b> <%= @recipe.public %></p>
+    </div>
+  <div><b>Cooking time:</b> <%= @recipe.cooking_time %></div>
+  <p>Steps go here...</p>
+  </article>
+  <div class="buttons d-flex justify-content-between">
+    <button class="btn btn-primary fw-bold">Generate Shopping List</button>
+    <button class="btn btn-success fw-bold">Add Ingredient</button>
+  </div>
+  <hr>
+</section>
