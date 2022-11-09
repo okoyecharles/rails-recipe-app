@@ -20,8 +20,8 @@ class Recipe < ApplicationRecord
   def total_price
     # Total price of the recipe
     sum = 0
-    RecipeFood.where(recipe_id: id).each do |ingredient|
-      sum += ingredient.food.price * ingredient.quantity / ingredient.food.quantity
+    all_ingredients.each do |i|
+      sum += i.food.price * i.quantity / i.food.quantity
     end
 
     sum
