@@ -5,6 +5,7 @@
         <div class="col">
         <h3 class="mb-4"><%= recipe.name %></h3>
         <%= link_to 'REMOVE', recipe, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+        <%= link_to 'VIEW', recipe, class: 'btn btn-primary' %>
       </div>
       <div class="col"><%= recipe.description %></div>
       </div>
@@ -12,4 +13,3 @@
 <% end %>
 </ul>
 
-<%# Recipe.create(name: 'private', description: 'a simple dish you can cook at home', cooking_time: '1', preparation_time: '1', public:false) %>

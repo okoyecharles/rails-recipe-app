@@ -6,11 +6,13 @@
       <p><b>Public:</b> <%= @recipe.public %></p>
     </div>
   <div><b>Cooking time:</b> <%= @recipe.cooking_time %></div>
-  <p>Steps go here...</p>
+  <p><%= @recipe.description %></p>
   </article>
   <div class="buttons d-flex justify-content-between">
     <button class="btn btn-primary fw-bold">Generate Shopping List</button>
-    <button class="btn btn-success fw-bold">Add Ingredient</button>
+    <button id="add-ingredient" data-toggle="modal" data-target="#add-ingredient-modal" class="btn btn-success fw-bold">Add Ingredient</button>
   </div>
   <hr>
+  <%= render 'table' %>
+  <%= render 'modal' %>
 </section>
