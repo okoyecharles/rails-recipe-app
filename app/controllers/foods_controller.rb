@@ -20,6 +20,17 @@ class FoodsController < ApplicationController
     end
   end
 
+  def destroy
+    food = Food.find(params[:id])
+    if food.destroy
+      flash[:success] = 'Food deleted successfully'
+    else
+      flash[:error] = 'There was an error deleting your food.'
+    end
+
+    redirect_to foods_path
+  end
+
   private
 
   def food_params

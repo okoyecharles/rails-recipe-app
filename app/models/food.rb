@@ -1,6 +1,6 @@
 class Food < ApplicationRecord
   belongs_to :user, class_name: 'User'
-  has_many :recipe_foods, class_name: 'RecipeFood'
+  has_many :recipe_foods, class_name: 'RecipeFood', dependent: :delete_all
 
   validates :name, presence: true
   validates :measurement_unit, presence: true
