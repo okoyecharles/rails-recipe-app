@@ -17,7 +17,7 @@ class User < ApplicationRecord
 
     # select foods for current_user with insufficient quantity
     foods.each do |food|
-      expected_quantity = foods_quantity_sum.where(food:).first.quantity_sum || nil
+      expected_quantity = foods_quantity_sum.where(food:).first&.quantity_sum || nil
 
       next unless expected_quantity
       next unless food.quantity < expected_quantity

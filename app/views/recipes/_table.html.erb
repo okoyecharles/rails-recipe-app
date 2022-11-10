@@ -10,9 +10,15 @@
         <td><%= ingredient.food.name %></td>
         <td><%= pluralize(ingredient.quantity, ingredient.food.measurement_unit) %></td>
         <td>$<%= ingredient.food.price * (ingredient.quantity) %></td>
-        <td><%= link_to 'Remove', recipe_food_path(ingredient),
+        <td>
+           <% if can? :destroy_ingredient, @recipe %>
+            <%= link_to 'Remove', recipe_food_path(ingredient),
           data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' },
-          class: 'btn bg-danger text-light fw-bold' %></td>
+          class: 'btn bg-danger text-light fw-bold' %>
+          <% else %>
+            <span class="text-secondary">...</span>
+          <% end %>
+        </td>
       <tr>
     <% end %>
   </table>
