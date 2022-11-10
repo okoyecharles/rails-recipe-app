@@ -49,12 +49,12 @@ If you encounter any errors, run the following commands.
 
 # 👤 Authors
 
-👤 **Daniel M. Matongo**
+👤 **Okoye Charles**
 
 - GitHub: [@OkoyeCharles](https://github.com/OkoyeCharles)
 - LinkedIn: [Okoye Charles](https://linkedin.com/in/charles-k-okoye)
 
-👤 **Juliana Ifionu**
+👤 **Brian Nyachae**
 
 - GitHub: [@Bria222](https://github.com/Bria222)
 - LinkedIn: [Brian (mr bree) nyachae](https://www.linkedin.com/in/brian-nyachae/)
