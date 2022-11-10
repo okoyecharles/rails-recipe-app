@@ -7,6 +7,6 @@ class Ability
     can %i[destroy show new create], Recipe, user: user
     can :show, Recipe, public: true
 
-    can :add_ingredient, Recipe, user:
+    can %i[add_ingredient destroy_ingredient], Recipe, user:
   end
 end

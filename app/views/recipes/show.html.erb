@@ -2,10 +2,20 @@
   <h3 class="text-center"><%= @recipe.name %></h3> 
   <article class="d-flex flex-column gap-3">
     <div class="d-flex justify-content-between">
-      <p><b>Preparation time:</b> <%= @recipe.preparation_time %></p>
+      <p>
+        <b>Preparation time:</b> 
+        <%= pluralize(@recipe.preparation_time.strftime('%H'), 'hr') %>: 
+        <%= pluralize(@recipe.preparation_time.strftime('%M'), 'min') %>: 
+        <%= pluralize(@recipe.preparation_time.strftime('%S'), 'sec') %>
+      </p>
       <p><b>Public:</b> <%= @recipe.public %></p>
     </div>
-  <div><b>Cooking time:</b> <%= @recipe.cooking_time %></div>
+    <div>
+      <b>Cooking time:</b> 
+      <%= pluralize(@recipe.cooking_time.strftime('%H'), 'hr') %>: 
+      <%= pluralize(@recipe.cooking_time.strftime('%M'), 'min') %>:
+      <%= pluralize(@recipe.cooking_time.strftime('%S'),'sec') %>
+    </div>
   <p><%= @recipe.description %></p>
   </article>
   <div class="buttons d-flex justify-content-between">
