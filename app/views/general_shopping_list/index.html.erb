@@ -1,11 +1,8 @@
 <section>
-<h1>Shopping List</h1>
-<div>
-<span>Amount of food items to buy:</span>
-<span>Total value of food needed:</span>
-
-<%= render 'table' %>
-
-</div>
-
+    <h1 class='text-center fw-bold'>Shopping List</h1>
+    <div class ='d-flex justify-content-between'>
+        <span class='fw-bold'>Amount of food items to buy: <%= @general_list.count %></span>
+        <span class='fw-bold'>Total value of food needed: $<%= @general_list.reduce(0) { |t, i| t + i[:price] } %></span>
+    </div>
+    <%= render 'table' %>
 </section>
