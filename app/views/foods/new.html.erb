@@ -1,19 +1,4 @@
-<%= form_with model: @food, method: :post, scope: :new_food do |f| %>
-  <div>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-  <div>
-    <%= f.label :price %>
-    <%= f.number_field :price %>
-  </div>
-  <div>
-    <%= f.label :quantity %>
-    <%= f.number_field :quantity %>
-  </div>
-  <div>
-    <%= f.label :measurement_unit %>
-    <%= f.text_field :measurement_unit %>
-  </div>
-  <%= f.submit 'Submit' %>
-<% end %>
+<main>
+  <h2 class="text-center">Add a food</h2>
+  <%= render 'form' %>
+</main>

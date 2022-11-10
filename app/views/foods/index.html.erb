@@ -1,22 +1,7 @@
 <section>
   <%= link_to new_food_path do %>
-    <button>Add Food</button>
+    <button class="bg-success rounded p-2 border-0 text-light fw-bold my-2">Add Food</button>
   <% end %>
 
-  <table>
-    <tr>
-      <th>Food</th>
-      <th>Measurement Unit</th>
-      <th>Unit Price</th>
-      <th>Actions</th>
-    </tr>
-    <% @foods.each do |food| %>
-      <tr>
-        <td><%= food.name %></td>
-        <td><%= food.quantity %><%= food.measurement_unit %></td>
-        <td>$<%= food.price %></td>
-        <td><%= link_to 'Delete', foods_path %></td>
-      <tr>
-    <% end %>
-  </table>
+  <%= render 'table' %>
 </section>

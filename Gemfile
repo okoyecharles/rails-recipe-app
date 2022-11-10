@@ -6,6 +6,9 @@ ruby '3.1.2'
 # Use the devise gem as session and account manager for the application
 gem 'devise'
 
+# Use the cancancan gem as authorization manager for the application
+gem 'cancancan'
+
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
@@ -62,6 +65,7 @@ end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
+  gem 'bullet'
   gem 'web-console'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]

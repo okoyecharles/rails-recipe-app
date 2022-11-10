@@ -1,6 +1,6 @@
 class FoodsController < ApplicationController
   def index
-    @foods = Food.all
+    @foods = current_user.foods
   end
 
   def new
@@ -18,6 +18,17 @@ class FoodsController < ApplicationController
       render :new
       flash[:error] = 'There was an error creating your food.'
     end
+  end
+
+  def destroy
+    food = Food.find(params[:id])
+    if food.destroy
+      flash[:success] = 'Food deleted successfully'
+    else
+      flash[:error] = 'There was an error deleting your food.'
+    end
+
+    redirect_to foods_path
   end
 
   private

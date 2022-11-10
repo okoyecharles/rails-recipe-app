@@ -1,13 +1,15 @@
-<h1>List of Recipes</h1>
-
-<% @recipes.each do |recipe| %>
-    <h3><%= recipe.name %></h3> 
-    <div>description: <%= recipe.description %></div>
-    <div>cooking time: <%= recipe.cooking_time %></div>
-    <div>preparation time: <%= recipe.preparation_time %></div>
-    <div>public: <%= recipe.public %></div>
-    <%= link_to 'delete', recipe, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %>
-    <hr>
-<% end %>
-<%# Recipe.create(name: 'private', description: 'a simple dish you can cook at home', cooking_time: '1', preparation_time: '1', public:false) %>
-
+<ul class='d-flex flex-column gap-3 p-0'>
+<%= link_to 'Create recipe', new_recipe_path, class: 'btn btn-success' %>
+  <% @recipes.each do |recipe| %>
+    <li class="card p-3 d-flex gap-3">
+      <div class="row">
+        <div class="col">
+        <h3 class="mb-4"><%= recipe.name %></h3>
+        <%= link_to 'REMOVE', recipe, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+        <%= link_to 'VIEW', recipe, class: 'btn btn-primary' %>
+      </div>
+      <div class="col"><%= recipe.description %></div>
+      </div>
+    </li>
+  <% end %>
+</ul>
