@@ -5,5 +5,4 @@ class RecipeFood < ApplicationRecord
   validates :food_id, presence: true
   validates :recipe_id, presence: true
   validates :quantity, presence: true, numericality: { greater_than_or_equal_to: 0 }
-
 end
