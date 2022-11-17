@@ -1,79 +1,232 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+<a name="readme-top"></a>
 
-# Group-Project
 
-> This is a ruby on rails application that allows users to create and manage recipes.
+<div align="center">
+  <img src="https://github.com/microverseinc/readme-template/blob/master/murple_logo.png" alt="logo" width="140"  height="auto" />
+  <br/>
+</div>
 
-## Video
+<!-- TABLE OF CONTENTS -->
 
-![P](recipe-app.gif)
+# 📗 Table of Contents
 
-# Getting Started
+<details>
+  <summary>Click to view contents</summary>
+  <ol>
+    <li>
+      <a href="#about-project">📖 About the Project</a>
+        <ul>
+          <li><a href="#video">📹 Video</a></li>
+          <li>
+            <a href="#built-with">🛠 Built With</a>
+            <ul>
+              <li><a href="#tech-stack">Tech Stack</a></li>
+              <li><a href="#key-features">Key Features</a></li>
+            </ul>
+          </li>
+          <li><a href="#live-demo">🚀 Live Demo</a></li>
+        </ul>
+    </li>
+    <li>
+      <a href="#getting-started">💻 Getting Started</a>
+      <ul>
+        <li><a href="#setup">Setup</a></li>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#install">Install</a></li>
+        <li><a href="#usage">Usage</a></li>
+        <li><a href="#run-tests">Run tests</a></li>
+        <li><a href="#deployment">Deployment</a></li>
+      </ul>
+    </li>
+    <li><a href="#authors">👥 Authors</a></li>
+    <li><a href="#future-features">🔭 Future Features</a></li>
+    <li><a href="#contributing">🤝 Contributing</a></li>
+    <li><a href="#support">⭐️ Show your support</a></li>
+    <li><a href="#acknowledgements">🙏 Acknowledgements</a></li>
+    <li><a href="#faq">❓ FAQ</a></li>
+    <li><a href="#license">📝 License</a></li>
+  </ol>
+</details>
 
-To get a local copy up and running follow these simple steps.
+<!-- PROJECT DESCRIPTION -->
 
-- You can clone this repo by typing `git clone https://github.com/OkoyeCharles/rails-recipe-app.git` on your terminal.
+# 📖 Rails Recipe App <a name="about-project"></a>
 
-- Type `cd recipes-app` to access the project on the terminal.
-  
-- Run `bundle install` to install all the required dependancies.
+This **Recipe App** is a ruby on rails application that allows users to create and manage recipes.
 
-- Run `rails db:create` and `rails db:migrate` to create & migrate records to the database.
+## 📹 Video <a name="video"></a>
 
-- Run `rails s` to start a development server.
+<div align="center">
+  <img width="700" src="recipe-app.gif" />
+</div>
 
-# Testing
 
-`bundle exec rspec` will run all the tests.
+## 🛠 Built With <a name="built-with"></a>
 
-Also, you can run `bundle exec rspec spec/` to run specific tests.
+### Tech Stack <a name="tech-stack"></a>
 
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://reactjs.org/">Rails</a></li>
+    <li><a href="https://javascript.com/">Javascript</a></li>
+    <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
+  </ul>
+</details>
+
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
+
+<!-- Features -->
+
+### Key Features <a name="key-features"></a>
+
+This projects aim is to help users create and manage recipes, below are the key features:
+
+- User authentication and authorization
+- Creating foods (ingredients) and managing recipes
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://frozen-mesa-28960.herokuapp.com)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+- Ruby
+- Rails
+- Node package manager (npm)
+
+### Setup
+
+#### Github
+- Enter this url: [https://github.com/okoyecharles/rails-recipe-app](https://github.com/OkoyeCharles/rails-recipe-app) in your web browser.
+- Once opened navigate to the top left level of the project a green code download button will be visible on the righthand side.
+- Select the download Zip option from drop-down menu.
+- Once the download is complete you will be able to access my project locally.
+
+#### Local (Terminal)
+
+```sh
+  git clone github.com/okoyecharles/rails-recipe-app.git
+  cd rails-recipe-app
+```
+
+### Install
+
+Install this project with:
+
+<!--
+
+```sh
+  cd rails-recipe-app
+  bundle install
+```
+--->
+
+### Usage
+
+To run the project, execute the following command:
+
+- Run `rails s` or `rails server` to start a development server.
+
+### Run tests
+
+To run tests, run the following command:
+
+`rspec spec` will run all the tests.
+Also, you can run `rspec spec/` to run specific tests.
 You can also run `RAILS_ENV=test rspec spec/` to run the tests in test mode.
 
-## Errors
+### Deployment
 
-If you encounter any errors, run the following commands.
+You can deploy this project using:
 
-- Run `rails db:migrate:reset` to drop, create and migrate a new database.
+- [Heroku](https://heroku.com/)
 
-- Run `rubocop && rubocop -A` to check for and fix code errors.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-# This project was built with
+<!-- AUTHORS -->
 
-- Ruby on Rails
+## 👥 Authors <a name="authors"></a>
 
-- Bootstrap CSS Framework
+### 👤 **Author1**
 
-- Postgressql
+- GitHub: [Okoye Charles](https://github.com/OkoyeCharles)
+- LinkedIn: [Okoye Charles](https://www.linkedin.com/in/charles-k-okoye/)
+- Twitter: [@twitterhandle](https://twitter.com/OkoyeCharles_)
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-# 👤 Authors
+<!-- FUTURE FEATURES -->
 
-👤 **Daniel M. Matongo**
+## 🔭 Future Features <a name="future-features"></a>
 
-- GitHub: [@OkoyeCharles](https://github.com/OkoyeCharles)
-- LinkedIn: [Okoye Charles](https://linkedin.com/in/charles-k-okoye)
+- Allow user to be able to generate shopping list for a particular recipe.
 
-👤 **Juliana Ifionu**
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- GitHub: [@Bria222](https://github.com/Bria222)
-- LinkedIn: [Brian (mr bree) nyachae](https://www.linkedin.com/in/brian-nyachae/)
+<!-- CONTRIBUTING -->
 
-# 🤝 Contributing
+## 🤝 Contributing <a name="contributing"></a>
 
-Contributions, issues, and feature requests are welcome!
+Contributions are what makes the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-Feel free to check the [issues page](https://github.com/okoyecharles/rails-recipes-app/issues).
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-# Show your support
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue, feel free to check the [issues page](../../issues/).
 
-Give a ⭐️ if you like this project!
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-# Acknowledgement
+<!-- SUPPORT -->
 
-- Hat tip to anyone whose code was a source of inspiration.
-- A big thanks to [@microverseinc](https://github.com/microverseinc).
+## ⭐️ Show your support <a name="support"></a>
 
-# 📝 License
+If you like this project. Don't forget to give it a ⭐️
 
-This project is [MIT](LICENSE) licensed.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+- A big thanks to [@microverseinc](https://github.com/microverseinc) for the project idea, guidance and inspiration.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FAQ  -->
+
+## ❓ FAQ <a name="faq"></a>
+
+- **What inspired me to create this project?**
+
+  - The inspiration for this project came from microverse – a software development bootcamp where you work with teammates remotely on different projects.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
